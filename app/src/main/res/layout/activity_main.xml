@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        app:itemBackground="?attr/colorPrimary"
+        app:itemBackground="@color/darkblack"
         app:itemIconTint="#f1c40f"
         app:itemTextColor="#f1c40f"
         app:menu="@menu/menu_tabs" />

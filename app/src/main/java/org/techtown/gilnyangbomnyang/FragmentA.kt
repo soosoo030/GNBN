@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_a.view.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,8 +33,21 @@ class FragmentA : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_a, container, false)
+        val view = inflater.inflate(R.layout.fragment_a, container, false)
+
+        view.addCat.setOnClickListener{//추가 버튼을 클릭하면 상세화면이 보이도록
+            view.catDetail.visibility = View.VISIBLE
+        }
+
+        view.cancel.setOnClickListener{//상세화면의 닫기 버튼을 클릭하면 보이지 않도록
+            view.catDetail.visibility = View.GONE
+        }
+
+
+
+        return view
     }
+
 
     companion object {
         /**

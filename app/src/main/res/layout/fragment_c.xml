@@ -7,18 +7,111 @@
     android:background="#272727"
     android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listview"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="9"
-        />
+        android:layout_weight="8">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            />
+
+        <LinearLayout
+            android:id="@+id/diary_write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date" />
+
+            <EditText
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Cat" />-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content">-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/feed"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="feed" />-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/water"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="water" />-->
+
+<!--                <CheckBox-->
+<!--                    android:id="@+id/rescue"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="rescue" />-->
+<!--            </LinearLayout>-->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Input" />
+
+            <EditText
+                android:id="@+id/diaryContent"
+                android:layout_width="match_parent"
+                android:layout_height="80pt"
+                android:gravity="top"
+                android:hint="일기를 작성해주세요:D"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom">
+
+                <Button
+                    android:id="@+id/cancelBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="CANCEL" />
+
+                <Button
+                    android:id="@+id/submitBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="SUBMIT" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
     <RelativeLayout
         android:id="@+id/setting_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        >
+        android:gravity="bottom">
         <ImageButton
+            android:id="@+id/setting"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/settings"
@@ -28,6 +121,7 @@
             android:layout_alignParentLeft="true"
             />
         <ImageButton
+            android:id="@+id/addDiary"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:src="@drawable/plus"
@@ -38,4 +132,5 @@
             android:layout_marginBottom="10dp"
             />
     </RelativeLayout>
+
 </LinearLayout>
